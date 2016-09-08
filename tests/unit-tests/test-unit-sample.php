@@ -13,7 +13,7 @@ public function test_wct_get_option()
 $get_option = $this->getFunctionMock('WCCT','get_option');
 
 $get_option->expects($this->once())
-	->($this->equalTo('wcct_venue'))
+	->with($this->equalTo('wcct_venue'))
 	->willReturn('river-club');
 
 $this->assertEquals('river-club',wcct_get_option('venue'));
